@@ -1,0 +1,4 @@
+﻿<div id="bc1" class="btn-group btn-breadcrumb">
+    <router-link class="btn btn-default" :to="{ name: 'Home' }"><i class="fa fa-home"></i> Home</router-link>
+    <router-link class="btn btn-default active" :to="{ name: $route.name }">{{$route.name}}</router-link>
+</div>

@@ -1,0 +1,41 @@
+﻿<section id="index" class="parallax">
+    <div class="index">
+        <div class="text-center">
+            <div class="clearfix"></div>
+            <br />
+            <div class="clearfix"></div>
+            <br />
+            <img :src="'images/HMT-Logo-outline.png' | contentUrl" style="padding: 20px;" class="img-responsive center-block" />
+            <div class="clearfix"></div>
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center">
+                <blockquote>
+                    <carousel :autoplay='true' :perPage="1" :autoplayTimeout='20000'>
+                        <slide>
+                            <p>{{slide1.quote}}</p>
+                            <small>{{slide1.author}}</small>
+                        </slide>
+                        <slide>
+                            <p>{{slide2.quote}}</p>
+                            <small>{{slide2.author}}</small>
+                        </slide>
+                        <slide>
+                            <p>{{slide3.quote}}</p>
+                            <small>{{slide3.author}}</small>
+                        </slide>
+                        <slide>
+                            <p>{{slide4.quote}}</p>
+                            <small>{{slide4.author}}</small>
+                        </slide>
+                    </carousel>
+                </blockquote>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <bottom-nav></bottom-nav>
+    </div>
+</section>
+

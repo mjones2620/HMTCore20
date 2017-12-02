@@ -1,0 +1,97 @@
+﻿<section id="appointments" class="parallax">
+    <div class="parallax-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="aboutMe">
+                        <div class="section-content text-center">
+                            <h2>Request an Appointment</h2>
+                            <hr class="botm-line" />
+                        </div>
+                        <div class="contact-section">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p>Use the form below to request an appointment. Correspondance will be handled and transmitted securely through e-mail.</p>
+                                    <div class="clearfix"></div>
+                                    <br />
+                                    <div class="form-group">
+                                        <label for="exampleInputUsername">Your name</label>
+                                        <input v-validate="{ rules: { required: true } }"
+                                               type="text"
+                                               class="form-control"
+                                               placeholder=" Enter Name"
+                                               name="Name"
+                                               v-model="request.name">
+                                        <span v-show="errors.has('Name')" class="small text-danger">{{ errors.first('Name') }}</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail">Email Address</label>
+                                        <p class="control has-icon has-icon-right">
+                                            <input v-validate="{ rules: { required: true, email: true } }"
+                                                   class="form-control"
+                                                   name="E-mail"
+                                                   type="email"
+                                                   placeholder=" Enter Email id"
+                                                   v-model="request.email">
+                                            <span v-show="errors.has('E-mail')" class="small text-danger">{{ errors.first('E-mail') }}</span>
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telephone">Mobile No.</label>
+                                        <input v-validate="{ rules: { required: true } }"
+                                               type="tel"
+                                               class="form-control"
+                                               name="Phone Number"
+                                               placeholder=" Enter 10-digit mobile no."
+                                               v-model="request.phoneNumber">
+                                        <span v-show="errors.has('Phone Number')" class="small text-danger">{{ errors.first('Phone Number') }}</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description"> Message</label>
+                                        <textarea v-validate="{ rules: { required: true } }"
+                                                  v-model="request.message"
+                                                  rows="6"
+                                                  class="form-control"
+                                                  name="Message"
+                                                  placeholder="Enter Your Message">
+                                    </textarea>
+                                        <span v-show="errors.has('Message')" class="small text-danger">{{ errors.first('Message') }}</span>
+                                        <small v-if="(request.message) && request.message.length > 0" class="text-muted">{{8000 - request.message.length}} Characters remaining..</small>
+                                    </div>
+                                    <div>
+                                        <button type="button" v-bind:disabled="errors.any() || request.name.length == 0" class="btn btn-primary submit" v-on:click="sendRequest"><i class="fa fa-check" aria-hidden="true"></i>  Send</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
+                                        <span aria-hidden="true" class="fa fa-calendar-check-o"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="section-content text-center">
+                                        <h3>Client Portal</h3>
+                                        <hr class="botm-line" />
+                                    </div>
+                                    <div class="contact-section">
+                                        <p>
+                                            For your convenience, the Client Portal allows you to set up appointment reminders (via email or text),
+                                            to view account balance and activity, to make online payments, and to do online scheduling following your initial appointment.
+                                        </p>
+                                        <div class="clearfix"></div>
+                                        <br />
+                                        <a class="btn btn-primary submit" href="https://www.psychselect.com/cgi-bin/therapyappointment/login.cfm?practitioner=21475" target="_blank">Client Portal</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
