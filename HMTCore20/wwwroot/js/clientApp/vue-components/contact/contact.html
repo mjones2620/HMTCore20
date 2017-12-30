@@ -8,36 +8,30 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-3 text-center">
-                    <div class="profile-userpic center-block">
-                        <img :src="'images/IMG_0477.jpg' | contentUrl" class="img-responsive" alt="">
-                    </div>
-                    <div>
-                        <a href="https://therapists.psychologytoday.com/rms/prof_detail.php?profid=235157&amp;p=10&amp;tr=Ext_Verify" title="verified by Psychology Today">
-                            <img src="https://therapists.psychologytoday.com/rms/external_verification.php?profid=235157"
-                                 height="69" width="146"
-                                 alt="verified by Psychology Today"
-                                 border="0">
-                        </a>
-                        <br />
-                        <span>
-                            <a href="mailto:aburant@healthyminds-therapy.com"><i class="fa fa-envelope"></i>&nbsp;E-mail Alycia</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
                     <h4>Healthy Minds Therapy</h4>
                     <span>
                         <i class="fa fa-map-marker"></i> 905 N Washington St <br /> Suite 322 <br /> Alexandria VA 22314
                     </span>
-                    <div class="clearfix"></div>
                     <br />
                     <span>
                         <i class="fa fa-phone"></i> 703-408-3512
                     </span>
+                    <div>
+                        <span>
+                            <a href="mailto:aburant@healthyminds-therapy.com"><i class="fa fa-envelope"></i>&nbsp;E-mail</a>
+                        </span>
+                        <div class="clearfix"></div>
+                        <br />
+                        <img src="https://therapists.psychologytoday.com/rms/external_verification.php?profid=235157"
+                             height="69" width="146"
+                             alt="verified by Psychology Today"
+                             border="0">
+                        <br />
+                    </div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-4"></div>
             </div>
         </div>
     </div>
@@ -58,6 +52,26 @@
                     <div class="panel-body">
                         <iframe width="100%" height="500px" frameborder="0" style="border:0"
                                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD6qRc9aCuO8QP4OOBnV4XVGlYA8LNafUo&q=950+N+Washington+St+%23322,+Alexandria,+VA+22314/@38.815133,-77.0473457,17z" allowfullscreen></iframe>
+                        <carousel :autoplay='true' :pagination-enabled="false" :perPage="4" :navigation-enabled="false" class="contact-carousel">
+                            <slide>
+                                <img :src="'images/office_img1.jpg' | contentUrl" class="img-responsive" />
+                            </slide>
+                            <slide>
+                                <img :src="'images/office_img2.jpg' | contentUrl" class="img-responsive" />
+                            </slide>
+                            <slide>
+                                <img :src="'images/office_img3.jpg' | contentUrl" class="img-responsive" />
+                            </slide>
+                            <slide>
+                                <img :src="'images/office_img4.jpg' | contentUrl" class="img-responsive" />
+                            </slide>
+                            <slide>
+                                <img :src="'images/office_img5.jpg' | contentUrl" class="img-responsive" />
+                            </slide>
+                            <slide>
+                                <img :src="'images/office_img6.jpg' | contentUrl" class="img-responsive" />
+                            </slide>
+                        </carousel>
                     </div>
                 </div>
             </div>

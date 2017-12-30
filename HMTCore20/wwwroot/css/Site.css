@@ -694,3 +694,11 @@ section #contact {
 #contact {
     background-color: #eeeeee !important;
 }
+
+
+.contact-carousel img {
+    height: 250px !important;
+    width: 100% !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
